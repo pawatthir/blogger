@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/pawatthir/blogger/logger"
+	"github.com/pawatthir/blogger/middleware/grpcclient"
 	"github.com/stretchr/testify/assert"
-	"github.com/your-username/blogger/logger"
-	"github.com/your-username/blogger/middleware/grpcclient"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"

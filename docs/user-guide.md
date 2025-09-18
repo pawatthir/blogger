@@ -20,7 +20,7 @@ Blogger is a production-ready Go logging library that combines the power of `slo
 Add the Blogger library to your Go project:
 
 ```bash
-go get github.com/your-username/blogger
+go get github.com/pawatthir/blogger
 ```
 
 ## Quick Start
@@ -33,7 +33,7 @@ package main
 import (
     "context"
     "log/slog"
-    "github.com/your-username/blogger/logger"
+    "github.com/pawatthir/blogger/logger"
 )
 
 func main() {
@@ -181,8 +181,8 @@ package main
 
 import (
     "github.com/gofiber/fiber/v2"
-    "github.com/your-username/blogger/logger"
-    "github.com/your-username/blogger/middleware/httpserver"
+    "github.com/pawatthir/blogger/logger"
+    "github.com/pawatthir/blogger/middleware/httpserver"
 )
 
 func main() {
@@ -224,8 +224,8 @@ package main
 
 import (
     "google.golang.org/grpc"
-    "github.com/your-username/blogger/logger"
-    "github.com/your-username/blogger/middleware/grpcserver"
+    "github.com/pawatthir/blogger/logger"
+    "github.com/pawatthir/blogger/middleware/grpcserver"
 )
 
 func main() {
@@ -254,7 +254,7 @@ package main
 
 import (
     "google.golang.org/grpc"
-    "github.com/your-username/blogger/middleware/grpcclient"
+    "github.com/pawatthir/blogger/middleware/grpcclient"
 )
 
 func main() {
@@ -317,7 +317,7 @@ package main
 import (
     "github.com/jackc/pgx/v5/pgxpool"
     "github.com/jackc/pgx/v5/tracelog"
-    "github.com/your-username/blogger/logger"
+    "github.com/pawatthir/blogger/logger"
 )
 
 func setupDatabase() *pgxpool.Pool {

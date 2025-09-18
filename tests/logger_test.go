@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/pawatthir/blogger/logger"
 	"github.com/stretchr/testify/assert"
-	"github.com/your-username/blogger/logger"
 )
 
 func TestInit(t *testing.T) {

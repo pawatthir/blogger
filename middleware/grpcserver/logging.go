@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/your-username/blogger/logger"
+	"github.com/pawatthir/blogger/logger"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/encoding/protojson"

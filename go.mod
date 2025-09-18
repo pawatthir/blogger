@@ -1,4 +1,4 @@
-module github.com/your-username/blogger
+module github.com/pawatthir/blogger
 
 go 1.23.0
 

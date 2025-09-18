@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/pawatthir/blogger/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/your-username/blogger/config"
 )
 
 func TestLoadFromFile(t *testing.T) {

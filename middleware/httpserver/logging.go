@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/your-username/blogger/logger"
+	"github.com/pawatthir/blogger/logger"
 )
 
 func convertHeaderAttrToString(key string, headers map[string][]string) string {
@@ -37,18 +37,18 @@ func (l *loggingMiddleware) Logging() fiber.Handler {
 	return func(c *fiber.Ctx) error {
 		startTime := time.Now()
 		requestBody := c.Body()
-		
+
 		// Set up a custom context for the request
 		ctx := context.WithValue(c.UserContext(), "middleware", "http")
 		c.SetUserContext(ctx)
-		
+
 		// Add panic recovery
 		defer func() {
 			if r := recover(); r != nil {
 				c.Status(500).JSON(fiber.Map{"error": "Internal Server Error"})
 			}
 		}()
-		
+
 		err := c.Next()
 		elapse := time.Since(startTime)
 		responseBody := c.Response().Body()

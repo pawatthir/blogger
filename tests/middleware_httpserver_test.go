@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/pawatthir/blogger/logger"
+	"github.com/pawatthir/blogger/middleware/httpserver"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/your-username/blogger/logger"
-	"github.com/your-username/blogger/middleware/httpserver"
 )
 
 func setupTestApp() *fiber.App {

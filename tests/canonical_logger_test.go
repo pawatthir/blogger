@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/pawatthir/blogger/logger"
 	"github.com/stretchr/testify/assert"
-	"github.com/your-username/blogger/logger"
 )
 
 func TestCompileCanonicalLogTemplate(t *testing.T) {

@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/pawatthir/blogger/logger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/your-username/blogger/logger"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -29,8 +29,8 @@ func TestCoolEncoder_EncodeEntry(t *testing.T) {
 	fields := []zapcore.Field{
 		zap.String("keep", "this field should be kept"),
 		zap.String("skip", "this field should be removed"),
-		zap.Int64("remove_me", 123), // Int64Type should be filtered
-		zap.String("keep_me", "456"),     // String type should be kept
+		zap.Int64("remove_me", 123),  // Int64Type should be filtered
+		zap.String("keep_me", "456"), // String type should be kept
 	}
 
 	buf, err := coolEncoder.EncodeEntry(entry, fields)
